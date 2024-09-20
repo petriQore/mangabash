@@ -30,10 +30,9 @@ echo -ne "Progress: ["
 # 30 should be enough for most weekly manga, zid ken ne9es
 for i in $(seq -f "%03g" 2 30); do
     url="${base_url}${i}.png"
-    curl -sf "$url" --output "$dir_name/$i.png"
+    curl -sf "$url" --output "$dir_name/$i.png" && echo -n "#"
     if [ $? -ne 0 ]; then
-        echo -ne "] Done!\n"
+        echo -ne "#] Done!\n"
         exit 1
     fi
-    echo -n "#"
 done
