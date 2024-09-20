@@ -7,8 +7,9 @@
 ## Usage
 
 ```sh
-./mangabash.sh
+./mangabash.sh <any-image-link-here>
 ```
+![example](image.png)
 
 ## Author
 
